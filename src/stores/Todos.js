@@ -23,14 +23,12 @@ export class TodoStore {
       });
   }
 
-  // Creates a fresh Todo on the client and the server.
   createTodo(data) {
     const todo = new Todo(this, data);
     this.todos.push(todo);
     return todo;
   }
 
-  // A Todo was somehow deleted, clean it from the client memory.
   removeTodo(todo) {
     this.todos.splice(this.todos.indexOf(todo), 1);
     todo.dispose();

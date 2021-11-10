@@ -6,11 +6,6 @@ import TodoCreate from "./TodoCreate";
 
 @observer
 class TodoList extends Component {
-    componentDidMount() {
-        console.warn("test");
-        console.log(this.props.store.todos);
-    }
-
     render() {
         const { store } = this.props;
         return (

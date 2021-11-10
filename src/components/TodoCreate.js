@@ -20,7 +20,6 @@ class TodoCreate extends Component {
             credentials: "same-origin", // include, *same-origin, omit
             headers: {
                 "Content-Type": "application/json"
-                // 'Content-Type': 'application/x-www-form-urlencoded',
             },
             redirect: "follow", // manual, *follow, error
             referrerPolicy: "no-referrer", //, // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
@@ -32,8 +31,6 @@ class TodoCreate extends Component {
                 this.props.store.createTodo(data);
                 this.title = "";
             });
-        // store.addTodo();
-        // console.log("snapshot", getSnapshot(store.todos));
         e.preventDefault();
     };
     render() {
