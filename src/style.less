@@ -1,4 +1,33 @@
+.todoitem {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    input,
+    button {
+        cursor: pointer;
+        margin: 0 5px !important;
+    }
+    button {
+        margin-left: auto !important;
+    }
+}
+.todoCreateForm {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    input {
+        width: 200px;
+        margin: 0 5px !important;
+    }
+    button {
+        margin: 0 !important;
+    }
+}
 .completed {
-  text-decoration: line-throughw;
-  background: green;
+    text-decoration: line-through;
+    color: white;
+    background: green;
+    button {
+        text-decoration: none;
+    }
 }
