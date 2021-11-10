@@ -1,28 +1,15 @@
 import React, { Component } from "react";
-import { observable } from "mobx";
 import { observer } from "mobx-react";
-import Todo from "./Todo";
-import TodoCreate from "./TodoCreate";
 
 @observer
 class TodoList extends Component {
-    componentDidMount() {
-        console.warn("test");
-        console.log(this.props.store.todos);
-    }
-
     render() {
         const { store } = this.props;
         return (
             <div>
-                <TodoCreate store={store} />
-                <hr />
-                <ul>
-                    {store.todos.map((todo, indx) => (
-                        <Todo todo={todo} index={indx} key={todo.id} />
-                    ))}
-                </ul>
-                Tasks left: {store.unfinishedTodoCount}
+                {store.todos.map(todo => (
+                    <div key={todo.id}>{todo.title}</div>
+                ))}
             </div>
         );
     }
